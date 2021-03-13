@@ -1,0 +1,136 @@
+body,
+html {
+  margin: 0 !important;
+  /*
+  Remove below if you want to be able to scroll on the site (aka if it's not emulating a mobile app)
+  More info here: https://stackoverflow.com/questions/7768269/ipad-safari-disable-scrolling-and-bounce-effect
+  */
+
+  width: 100%;
+  height: 100% !important;
+
+  background-color: #000000 !important;
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+*::-webkit-scrollbar {
+  /* WebKit */
+  width: 0px;
+}
+
+.js-focus-visible :focus:not([data-focus-visible-added]) {
+  outline: none;
+  box-shadow: none;
+}
+
+.web3modal-modal-lightbox {
+  z-index: 9999 !important;
+}
+
+/* 
+These fonts only have ASCII glyphs. 
+If you want to add some more glyphs but still remove useless ones go to: https://transfonter.org/ 
+Here's the symbols we currently support: " !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+*/
+@font-face {
+  font-family: "Avenir Next";
+  src: url(AvenirNext-Bold.woff2) format("woff2"),
+    url(AvenirNext-Bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url(AvenirNext-Regular.woff2) format("woff2"),
+    url(AvenirNext-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@-webkit-keyframes GradientBackgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes GradientBackgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes GradientBackgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 
+This fixes these weird white borders around loading base64 images.
+
+More info here: https://stackoverflow.com/questions/13151340/how-to-remove-borders-around-broken-images-in-webkit/33387257
+*/
+img:not([src]) {
+  display: none;
+}
+
+.blinking {
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bn-notify-custom .bn-notify-dark-mode {
+  background-color: #121212 !important;
+  border: 1px solid #272727;
+}
+
+.bn-notify-custom .bn-notify-notification-info {
+  background-color: #121212 !important;
+}
+
+.black-bg-option {
+  background-color: #121212 !important;
+}
+
+.no-underline:focus,
+.no-underline:hover,
+.no-underline:visited,
+.no-underline:link,
+.no-underline:active {
+  text-decoration: none !important;
+}
